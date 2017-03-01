@@ -20,28 +20,29 @@ int main()
 
 	//WalkEnemy walkEnemy;
 	Enemy * enemy = new WalkEnemy();
+	delete enemy;
 
 	cout << "enemy size:" << sizeof(Enemy) << endl;
 	cout << "walk enemy size:" << sizeof(WalkEnemy) << endl;
 
-	enemy->GetIdCount();
+	/*enemy->GetIdCount();
 
 	WalkEnemy * walkEnemy = (WalkEnemy *)enemy;
 	walkEnemy->GetIdCount();
 
 	enemy->ChangeIdCount();
-	walkEnemy->GetIdCount();
+	walkEnemy->GetIdCount();*/
 
 
 	// Óò µÄ¸ÅÄî
-	{
+	/*{
 		int x = 10;
 		{
 			int x = 20;
 			cout << "x = "<<x << endl;
 		}
 		cout << "x = " << x << endl;
-	}
+	}*/
 
     return 0;
 	 
