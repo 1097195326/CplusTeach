@@ -6,29 +6,42 @@
 
 using namespace  std;
 
-//#include "WeiYunsuan.h"
-//#include "ZhiZhen.h"
-//#include "Functions.h"
-//#include "FunctionTemplate.h"
-//#include "TeachHong.h"
-
-#include "EnemyManager.h"
+#include "WalkEnemy.h"
 
 
 int main() 
 {
-	//ZiFuChuan();
-	//ShowPoint();
-	//CallFunctions();
-	//CallFunTem();
-	//CallHong();
+	// Enemy		{IdCount,testId}
+	// WalkEnemy	{IdCount,testId,testId}
 
-	//cout << "test size:" << sizeof(TestSize) << endl;
-	
-	E_M_Instance->CreateEnemys();
-	E_M_Instance->ShowEnmeysId();
-	E_M_Instance->ShowEnemysName();
+	//		new		¶Ñ	testId£¬testId
+	//				Õ»	testId£¬testId
+	// ¾²Ì¬³£Á¿ÄÚ´æ		IdCount
 
+	//WalkEnemy walkEnemy;
+	Enemy * enemy = new WalkEnemy();
+
+	cout << "enemy size:" << sizeof(Enemy) << endl;
+	cout << "walk enemy size:" << sizeof(WalkEnemy) << endl;
+
+	enemy->GetIdCount();
+
+	WalkEnemy * walkEnemy = (WalkEnemy *)enemy;
+	walkEnemy->GetIdCount();
+
+	enemy->ChangeIdCount();
+	walkEnemy->GetIdCount();
+
+
+	// Óò µÄ¸ÅÄî
+	{
+		int x = 10;
+		{
+			int x = 20;
+			cout << "x = "<<x << endl;
+		}
+		cout << "x = " << x << endl;
+	}
 
     return 0;
 	 
