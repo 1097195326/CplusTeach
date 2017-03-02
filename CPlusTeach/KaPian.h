@@ -62,6 +62,7 @@ public:
 	string	GetName();
 public:
 	KaPian();
+	KaPian(int type, int value);
 	~KaPian();
 };
 
