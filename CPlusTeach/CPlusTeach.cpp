@@ -11,8 +11,8 @@ using namespace  std;
 
 int main() 
 {
-	// Enemy		{IdCount,testId}
-	// WalkEnemy	{IdCount,testId,testId}
+	// Enemy		{testId}
+	// WalkEnemy	{testId,testId}
 
 	//		new		¶Ñ	testId£¬testId
 	//				Õ»	testId£¬testId
@@ -20,29 +20,29 @@ int main()
 
 	//WalkEnemy walkEnemy;
 	Enemy * enemy = new WalkEnemy();
-	delete enemy;
+	//delete enemy;
 
 	cout << "enemy size:" << sizeof(Enemy) << endl;
 	cout << "walk enemy size:" << sizeof(WalkEnemy) << endl;
 
-	/*enemy->GetIdCount();
+	enemy->GetIdCount();
 
 	WalkEnemy * walkEnemy = (WalkEnemy *)enemy;
 	walkEnemy->GetIdCount();
 
 	enemy->ChangeIdCount();
-	walkEnemy->GetIdCount();*/
+	walkEnemy->GetIdCount();
 
 
 	// Óò µÄ¸ÅÄî
-	/*{
+	{
 		int x = 10;
 		{
-			int x = 20;
+			//int x = 20;
 			cout << "x = "<<x << endl;
 		}
 		cout << "x = " << x << endl;
-	}*/
+	}
 
     return 0;
 	 
