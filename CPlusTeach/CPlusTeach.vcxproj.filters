@@ -24,35 +24,8 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WeiYunsuan.h">
+    <ClInclude Include="KaPian.h">
       <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ZhiZhen.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Functions.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionA.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionB.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionTemplate.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TeachHong.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyManager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="WalkEnemy.h">
-      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,13 +35,7 @@
     <ClCompile Include="CPlusTeach.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="EnemyManager.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="WalkEnemy.cpp">
+    <ClCompile Include="KaPian.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

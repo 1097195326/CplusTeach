@@ -6,43 +6,26 @@
 
 using namespace  std;
 
-#include "WalkEnemy.h"
+#include "KaPian.h"
 
-
-int main() 
+__int16 K_Data[6][15] =
 {
-	// Enemy		{testId}
-	// WalkEnemy	{testId,testId}
+	//  {1,2,3,4,5,6,7,8,9,10,11,12,13,x, d }
 
-	//		new		¶Ñ	testId£¬testId
-	//				Õ»	testId£¬testId
-	// ¾²Ì¬³£Á¿ÄÚ´æ		IdCount
+	{ 1,2,3,4,5,6,7,8,9,10,11,12,13,0 ,0 },	//hei
+	{ 1,2,3,4,5,6,7,8,9,10,11,12,13,0 ,0 },	//hong
+	{ 1,2,3,4,5,6,7,8,9,10,11,12,13,0 ,0 },	//mei
+	{ 1,2,3,4,5,6,7,8,9,10,11,12,13,0 ,0 },	//fang
+	{ 0,0,0,0,0,0,0,0,0,0 ,0 ,0 ,0 ,14,0 },	//x
+	{ 0,0,0,0,0,0,0,0,0,0 ,0 ,0 ,0 ,0 ,15 },	//d
+};
+string TypeToString[] = { "HeiTao","HongTao","MeiHua","FangPian","XiaoWang","DaWang" };
+string ValueToString[] = { "Jian","Er","San","Si","Wu","Liu","Qi","Ba","Jiu","Shi","ShiYi","ShiEr","ShiSan","XiaoW","DaW" };
 
-	//WalkEnemy walkEnemy;
-	Enemy * enemy = new WalkEnemy();
-	//delete enemy;
-
-	cout << "enemy size:" << sizeof(Enemy) << endl;
-	cout << "walk enemy size:" << sizeof(WalkEnemy) << endl;
-
-	enemy->GetIdCount();
-
-	WalkEnemy * walkEnemy = (WalkEnemy *)enemy;
-	walkEnemy->GetIdCount();
-
-	enemy->ChangeIdCount();
-	walkEnemy->GetIdCount();
-
-
-	// Óò µÄ¸ÅÄî
-	{
-		int x = 10;
-		{
-			//int x = 20;
-			cout << "x = "<<x << endl;
-		}
-		cout << "x = " << x << endl;
-	}
+int main()
+{
+	KaPian * kaPian = new KaPian();
+	kaPian->SetType(HeiTao);
 
     return 0;
 	 
