@@ -3,8 +3,9 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <time.h>
 
-using namespace  std;
+using namespace std;
 
 #include "KaPian.h"
 
@@ -26,15 +27,48 @@ void PrintName(KaPian * Arr[],int len)
 {
 	for (int i = 0; i < len; ++i)
 	{
-		if (i % 6 >= 5)
+		if (i % 6 == 5)
 		{
 			cout << endl;
 		}
 		KaPian * KP = Arr[i];
-		cout<<KP->GetName().c_str() << ", ";
+
+		cout<<KP->GetName().c_str() << ",";
+
+		int len = (int)strlen(KP->GetName().c_str());
+		for (int i = 0; i < 25 - len; ++i)
+		{
+			cout << " ";
+		}
 	}
 	cout << endl;
 
+}
+void Sort(KaPian * Arr[], int len)
+{
+	for (int i = 0; i < len; ++i)
+	{
+		for (int j = 0; j < len - i - 1; ++j)
+		{
+			if (Arr[j]->MyPre < Arr[j + 1]->MyPre)
+			{
+				KaPian * kaPian = Arr[j];
+				Arr[j] = Arr[j + 1];
+				Arr[j + 1] = kaPian;
+			}
+		}
+	}
+}
+void XiPai(KaPian * Arr[], int len)
+{
+	for (int i = 0; i < len; ++i)
+	{
+		srand(time(NULL));
+		int r = rand() % len - i;
+		KaPian * kaPian = Arr[i];
+		Arr[i] = Arr[i+r];
+		Arr[i+r] = kaPian;
+	}
 }
 int main()
 {
@@ -57,12 +91,13 @@ int main()
 			if (pre > 0)
 			{
 				AllKaPian[All_K_Ptr] = new KaPian(i, j);
+				AllKaPian[All_K_Ptr]->MyPre = pre;
 				++All_K_Ptr;
 			}
 		}
 	}
 	// Ï´ÅÆ
-
+	XiPai(AllKaPian, 54);
 	// ·¢ÅÆ
 	for (int i = 0; i < 54; ++i)
 	{
@@ -92,6 +127,23 @@ int main()
 	}
 
 	// ´òÓ¡
+	/*cout << "A Person " << endl;
+	PrintName(A_Person, 18);
+	cout << endl;
+	cout << "B Person " << endl;
+	PrintName(B_Person, 18);
+	cout << endl;
+	cout << "C Person " << endl;
+	PrintName(C_Person, 18);
+	cout << endl;*/
+
+	// ÅÅÐò
+	Sort(A_Person, 18);
+	Sort(B_Person, 18);
+	Sort(C_Person, 18);
+	// ´òÓ¡
+	cout << "Sort After" << endl;
+	cout << endl;
 	cout << "A Person " << endl;
 	PrintName(A_Person, 18);
 	cout << endl;
@@ -101,11 +153,6 @@ int main()
 	cout << "C Person " << endl;
 	PrintName(C_Person, 18);
 	cout << endl;
-
-	// ÅÅÐò
-
-	// ´òÓ¡
-
     return 0;
 	 
 }

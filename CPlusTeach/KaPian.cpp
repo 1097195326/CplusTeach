@@ -117,11 +117,11 @@ string KaPian::GetName()
 	switch (__Type)
 	{
 	case XiaoWang:
-		return TypeName;
+		return TypeName + "_pre:" + to_string(MyPre);
 		break;
 	case DaWang:
-		return TypeName;
+		return TypeName + "_pre:" + to_string(MyPre);
 		break;
 	}
-	return TypeName + " " + ValueToString[__Value];
+	return TypeName + "_" + ValueToString[__Value] +"_pre:"+ to_string(MyPre);
 }
