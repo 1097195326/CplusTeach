@@ -1,17 +1,13 @@
 #pragma once
-
 #include "Enemy.h"
 
 
-class WalkEnemy : public Enemy
+class FlyEnemy : public Enemy
 {
 public:
-	
 	virtual void Move();
 	virtual void Attack();
 
-	virtual void Die(int type = 2);
-
-	~WalkEnemy();
+	~FlyEnemy();
 };
 

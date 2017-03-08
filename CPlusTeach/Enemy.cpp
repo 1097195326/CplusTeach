@@ -1,25 +1,19 @@
 #include "stdafx.h"
 #include "Enemy.h"
 
- __int32 Enemy::IdCount = 0;
-
-
-Enemy::Enemy()
+void Enemy::Move()
 {
-	IdCount = 100;
-	testId = 11;
-	
-	cout << "Enemy 构造函数" << endl;
+	cout << "enemy move" << endl;
+}
+void Enemy::Attack()
+{
+	cout << "enemy attack" << endl;
+}
+void Enemy::Die(int type)
+{
+	cout << "enemy die type = "<<type << endl;
 }
 Enemy::~Enemy()
 {
-	cout << "Enemy 析够函数" << endl;
-}
-void Enemy::GetIdCount()
-{
-	cout << "Enemy id count " << IdCount<<", testid = "<<testId << endl;
-}
-void Enemy::ChangeIdCount()
-{
-	IdCount = 300;
+	cout << "enemy 析够" << endl;
 }

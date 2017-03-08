@@ -1,24 +1,15 @@
 #pragma once
 
-#include <String>
-#include <iostream>
+#include "EnemyInterface.h"
 
-using namespace std;
 
-class Enemy
+class Enemy :public EnemyInterface
 {
-private:
-	
-protected:
-	
 public:
-	static __int32 IdCount;
-	int			testId;
+	virtual void Move();
+	virtual void Attack();
+	
+	virtual void Die(int type = 1);
 
-	Enemy();
 	~Enemy();
-
-	void		GetIdCount();
-	void		ChangeIdCount();
-
 };

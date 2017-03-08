@@ -7,42 +7,61 @@
 using namespace  std;
 
 #include "WalkEnemy.h"
+#include "FlyEnemy.h"
 
+int EnemyTypeData[] = { 1,2,3 };
 
 int main() 
 {
-	// Enemy		{testId}
-	// WalkEnemy	{testId,testId}
-
-	//		new		堆	testId，testId
-	//				栈	testId，testId
-	// 静态常量内存		IdCount
-
-	//WalkEnemy walkEnemy;
-	Enemy * enemy = new WalkEnemy();
-	//delete enemy;
-
-	cout << "enemy size:" << sizeof(Enemy) << endl;
-	cout << "walk enemy size:" << sizeof(WalkEnemy) << endl;
-
-	enemy->GetIdCount();
-
-	WalkEnemy * walkEnemy = (WalkEnemy *)enemy;
-	walkEnemy->GetIdCount();
-
-	enemy->ChangeIdCount();
-	walkEnemy->GetIdCount();
-
-
-	// 域 的概念
+	Enemy * EnemyList[2];
+	int EnemyIndex = 0;
+	// 获得数据
+	for (int i = 0; i < 3; ++i)
 	{
-		int x = 10;
+		Enemy * enemy = nullptr;
+		switch (EnemyTypeData[i])
 		{
-			//int x = 20;
-			cout << "x = "<<x << endl;
+		case 1:
+			enemy = new WalkEnemy();
+			break;
+		case 2:
+			enemy = new FlyEnemy();
+			break;
+		default :
+			cout << "Do not know this Enemy Type " << endl;
+			break;
 		}
-		cout << "x = " << x << endl;
+		if (enemy)
+		{
+			EnemyList[EnemyIndex] = enemy;
+			++EnemyIndex;
+		}
 	}
+	// 行走逻辑
+	cout << endl;
+	for (int i = 0; i < 2; ++i)
+	{
+		EnemyList[i]->Move();
+	}
+	// 攻击逻辑
+	cout << endl;
+	for (int i = 0; i < 2; ++i)
+	{
+		EnemyList[i]->Attack();
+	}
+	// 死亡逻辑
+	cout << endl;
+	for (int i = 0; i < 2; ++i)
+	{
+		EnemyList[i]->Die();
+	}
+	// 内存释放
+	cout << endl;
+	for (int i = 0; i < 2; ++i)
+	{
+		delete EnemyList[i];
+	}
+	cout << endl;
 
     return 0;
 	 

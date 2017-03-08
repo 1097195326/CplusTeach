@@ -1,20 +1,19 @@
 #include "stdafx.h"
 #include "WalkEnemy.h"
 
-WalkEnemy::WalkEnemy()
+void WalkEnemy::Move()
 {
-	IdCount = 200;
-	testId = 22;
-	cout << "Walk Enemy 构造函数" << endl;
+	cout << "WalkEnmey move action : 行走" << endl;
 }
-
-
+void WalkEnemy::Attack()
+{
+	cout << "WalkEnemy Attack action : 劈砍" << endl;
+}
+void WalkEnemy::Die(int type)
+{
+	cout << "WalkEnemy Die type :" << type << endl;
+}
 WalkEnemy::~WalkEnemy()
 {
-	cout << "Walk Enemy 析够函数" << endl;
-}
-
-void WalkEnemy::GetIdCount()
-{
-	cout << "Walk Enemy id count "<< IdCount<<", testid = "<<testId << endl;
+	cout << "WalkEnemy 析够" << endl;
 }

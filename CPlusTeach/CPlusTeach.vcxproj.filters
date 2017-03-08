@@ -24,34 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WeiYunsuan.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ZhiZhen.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Functions.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionA.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionB.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FunctionTemplate.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TeachHong.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyManager.h">
+    <ClInclude Include="WalkEnemy.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WalkEnemy.h">
+    <ClInclude Include="EnemyInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FlyEnemy.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,10 +47,10 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyManager.cpp">
+    <ClCompile Include="WalkEnemy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="WalkEnemy.cpp">
+    <ClCompile Include="FlyEnemy.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
