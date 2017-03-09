@@ -41,7 +41,8 @@ int main()
 	cout << endl;
 	for (int i = 0; i < 2; ++i)
 	{
-		EnemyList[i]->Move();
+		//EnemyList[i]->Move();
+		EnemyList[i]->DelegateMove();
 	}
 	// ¹¥»÷Âß¼­
 	cout << endl;

@@ -6,6 +6,7 @@
 class Enemy :public EnemyInterface
 {
 public:
+	void	DelegateMove();
 	virtual void Move();
 	virtual void Attack();
 	

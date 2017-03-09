@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "Enemy.h"
 
+void Enemy::DelegateMove()
+{
+	Move();
+}
 void Enemy::Move()
 {
 	cout << "enemy move" << endl;
