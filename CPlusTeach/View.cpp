@@ -29,5 +29,5 @@ void View::Update()
 }
 void View::ShowJinBi()
 {
-	cout << "界面显示当前玩家金币："<< __ShowJinBi <<"个金币" << endl;
+	cout << "界面显示当前玩家金币：" << __ShowJinBi << "个金币" << endl << endl;;
 }

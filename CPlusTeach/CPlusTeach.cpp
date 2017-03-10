@@ -17,23 +17,18 @@ int main()
 	view->SetModel(model);
 	view->ShowJinBi();
 
-	cout << endl;
 	PaySDK * paySdk = new PaySDK();
 	paySdk->SetPayDelegate(model);
 	paySdk->PayBegin();
-	cout << endl;
 	paySdk->PayFinish();
 
-	cout << endl;
 	view->ShowJinBi();
 
-	cout <<"再次充值"<< endl;
+	cout << "再次充值-------" << endl << endl;
 	paySdk->SetPayDelegate(model);
 	paySdk->PayBegin();
-	cout << endl;
 	paySdk->PayFinish();
 
-	cout << endl;
 	view->ShowJinBi();
 
 	delete model;
