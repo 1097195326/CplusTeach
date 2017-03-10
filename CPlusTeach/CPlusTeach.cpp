@@ -2,73 +2,46 @@
 //
 
 #include "stdafx.h"
-#include <iostream>
 
-using namespace  std;
+#include "PaySDK.h"	
+#include "Model.h"
+#include "View.h"
 
-#include "WalkEnemy.h"
-#include "FlyEnemy.h"
 
-int EnemyTypeData[] = { 1,2,3 };
 
 int main() 
 {
-	Enemy * EnemyList[2];
-	int EnemyIndex = 0;
-	// 获得数据
-	for (int i = 0; i < 3; ++i)
-	{
-		Enemy * enemy = nullptr;
-		switch (EnemyTypeData[i])
-		{
-		case 1:
-			enemy = new WalkEnemy();
-			break;
-		case 2:
-			enemy = new FlyEnemy();
-			break;
-		default :
-			cout << "Do not know this Enemy Type " << endl;
-			break;
-		}
-		if (enemy)
-		{
-			EnemyList[EnemyIndex] = enemy;
-			++EnemyIndex;
-		}
-	}
-	// 行走逻辑
-	cout << endl;
-	for (int i = 0; i < 2; ++i)
-	{
-		//EnemyList[i]->Move();
-		EnemyList[i]->DelegateMove();
-	}
-	// 攻击逻辑
-	cout << endl;
-	for (int i = 0; i < 2; ++i)
-	{
-		EnemyList[i]->Attack();
-	}
-	// 死亡逻辑
-	cout << endl;
-	for (int i = 0; i < 2; ++i)
-	{
-		if (i == 0)
-		{
-			WalkEnemy * enemy = (WalkEnemy *)EnemyList[i];
-			enemy->Die(2);
-		}
-		EnemyList[i]->Die(2);
-	}
-	// 内存释放
-	cout << endl;
-	for (int i = 0; i < 2; ++i)
-	{
-		delete EnemyList[i];
-	}
-	cout << endl;
+	Model * model = new Model();
+	View * view = new View();
 
+	view->SetModel(model);
+	view->ShowJinBi();
+
+	cout << endl;
+	PaySDK * paySdk = new PaySDK();
+	paySdk->SetPayDelegate(model);
+	paySdk->PayBegin();
+	cout << endl;
+	paySdk->PayFinish();
+
+	cout << endl;
+	view->ShowJinBi();
+
+	cout <<"再次充值"<< endl;
+	paySdk->SetPayDelegate(model);
+	paySdk->PayBegin();
+	cout << endl;
+	paySdk->PayFinish();
+
+	cout << endl;
+	view->ShowJinBi();
+
+	delete model;
+	view->SetModel(nullptr);
+	delete view;
+	delete paySdk;
+
+	cout << endl;
     return 0;
 	 
 }

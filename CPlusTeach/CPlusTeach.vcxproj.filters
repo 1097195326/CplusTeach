@@ -24,16 +24,28 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
+    <ClInclude Include="SubjectInterface.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WalkEnemy.h">
+    <ClInclude Include="ObserverInterface.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyInterface.h">
+    <ClInclude Include="Observer.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FlyEnemy.h">
+    <ClInclude Include="Subject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PayDelegate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PaySDK.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,13 +56,19 @@
     <ClCompile Include="CPlusTeach.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
+    <ClCompile Include="Observer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="WalkEnemy.cpp">
+    <ClCompile Include="Subject.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FlyEnemy.cpp">
+    <ClCompile Include="Model.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PaySDK.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
