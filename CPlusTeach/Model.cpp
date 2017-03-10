@@ -15,7 +15,7 @@ Model::~Model()
 void Model::PayBegin(int money)
 {
 	cout << "用户点击充值，并充值了:"<< money <<"元"<< endl;
-	cout << "。。。。充值等待成功" << endl << endl;;
+	cout << "充值等待....." << endl << endl;;
 }
 void Model::PayFinish(int JinBi)
 {
