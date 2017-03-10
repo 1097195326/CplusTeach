@@ -54,7 +54,12 @@ int main()
 	cout << endl;
 	for (int i = 0; i < 2; ++i)
 	{
-		EnemyList[i]->Die();
+		if (i == 0)
+		{
+			WalkEnemy * enemy = (WalkEnemy *)EnemyList[i];
+			enemy->Die(2);
+		}
+		EnemyList[i]->Die(2);
 	}
 	// ÄÚ´æÊÍ·Å
 	cout << endl;

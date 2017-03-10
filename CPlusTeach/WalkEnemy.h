@@ -10,7 +10,7 @@ public:
 	virtual void Move();
 	virtual void Attack();
 
-	virtual void Die(int type = 2);
+	virtual void Die(int type);
 
 	~WalkEnemy();
 };
