@@ -16,6 +16,7 @@ int main()
 {
 	ABC::CallFunction();
 	{
+
 		using namespace ABC;
 
 		CallFunction();
