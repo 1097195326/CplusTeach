@@ -1,3 +1,10 @@
-﻿  CPlusTeach.cpp
+﻿  WorkState.cpp
+  ToiletState.cpp
+  RestState.cpp
+  Person.cpp
+  正在生成代码...
+  正在跳过...(未检测到相关更改)
+  PersonStateManager.cpp
+  CPlusTeach.cpp
   CPlusTeach.vcxproj -> E:\TeachProgram\CPP_Teach\CplusTeach\CPlusTeach\Debug\CPlusTeach.exe
   CPlusTeach.vcxproj -> E:\TeachProgram\CPP_Teach\CplusTeach\CPlusTeach\Debug\CPlusTeach.pdb (Full PDB)
