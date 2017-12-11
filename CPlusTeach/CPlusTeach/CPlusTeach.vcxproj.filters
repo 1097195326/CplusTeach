@@ -24,48 +24,12 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="WorkState.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="RestState.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ToiletState.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PersonStateManager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CPlusTeach.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="WorkState.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Person.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="RestState.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ToiletState.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="PersonStateManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
